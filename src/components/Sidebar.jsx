@@ -1,20 +1,30 @@
-"use client"
-import { BarChart2, FileText, Grid, LogOut, Users, X } from "lucide-react"
+"use client";
+
+import { BarChart2, FileText, Grid, LogOut, Users, X } from "lucide-react";
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
   return (
     <>
-      {isOpen && <div className="fixed inset-0 bg-gray-600 bg-opacity-75 z-20 md:hidden" onClick={closeSidebar}></div>}
+      {isOpen && (
+        <div
+          className="fixed inset-0 bg-gray-600 bg-opacity-75 z-20 md:hidden"
+          onClick={closeSidebar}
+        ></div>
+      )}
 
       <aside
         className={`
-          fixed inset-y-0 left-0 z-30 w-64 bg-white border-r border-gray-200 transform transition-transform duration-300 ease-in-out md:relative md:translate-x-0
+          fixed inset-y-0 left-0 z-30 w-64 bg-white transform transition-transform duration-300 ease-in-out
+          md:relative md:translate-x-0 shadow-lg
           ${isOpen ? "translate-x-0" : "-translate-x-full"}
         `}
       >
-        <div className="h-16 flex items-center justify-between px-6 border-b border-gray-200">
+        <div className="h-16 flex items-center justify-between px-6">
           <h1 className="text-xl font-bold text-blue-700">INSMART</h1>
-          <button className="md:hidden p-1 rounded-md hover:bg-gray-100" onClick={closeSidebar}>
+          <button
+            className="md:hidden p-1 rounded-md hover:bg-gray-100"
+            onClick={closeSidebar}
+          >
             <X size={20} />
           </button>
         </div>
@@ -66,7 +76,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
         </div>
       </aside>
     </>
-  )
-}
+  );
+};
 
-export default Sidebar
+export default Sidebar;
