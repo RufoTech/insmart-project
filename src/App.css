@@ -1,0 +1,45 @@
+@import "tailwindcss";
+.sidebar-item {
+    @apply flex items-center gap-2 px-4 py-3 text-gray-600 hover:bg-blue-50 hover:text-blue-700 rounded-md transition-colors;
+  }
+  
+  .sidebar-item.active {
+    @apply bg-blue-50 text-blue-700;
+  }
+  
+  .sidebar-heading {
+    @apply text-xs font-semibold uppercase text-gray-500 px-4 py-2;
+  }
+  
+  .btn-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md transition-colors;
+  }
+  
+  .table-container {
+    @apply bg-white rounded-lg shadow-sm overflow-hidden;
+  }
+  
+  .table-header {
+    @apply bg-gray-50 text-gray-600 text-sm font-medium;
+  }
+  
+  .table-header th {
+    @apply px-6 py-3 text-left;
+  }
+  
+  .table-row {
+    @apply border-t border-gray-200 hover:bg-gray-50;
+  }
+  
+  .table-row td {
+    @apply px-6 py-4 text-sm text-gray-700;
+  }
+  
+  .status-active {
+    @apply text-green-600;
+  }
+  
+  .status-inactive {
+    @apply text-red-600;
+  }
+  
