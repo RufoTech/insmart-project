@@ -1,6 +1,6 @@
 "use client";
 
-import { BarChart2, FileText, Grid, LogOut, Users, X } from "lucide-react";
+import { BarChart2, FileText, Grid, LogOut, Users, X, Lock } from "lucide-react";
 
 const Sidebar = ({ isOpen, closeSidebar }) => {
   return (
@@ -42,12 +42,16 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
 
           <div className="mb-4">
             <div className="sidebar-heading">ANALIZ</div>
-            <nav className="mt-1">
-              <a href="/dashboard" className="sidebar-item">
+            <nav className="mt-1 space-y-1 px-2">
+              <a
+                href="/dashboard"
+                className="sidebar-item bg-gray-100 rounded-md flex items-center gap-2 px-3 py-2"
+              >
                 <Grid size={18} />
                 <span>İdarə paneli</span>
+                <Lock size={16} className="ml-auto text-gray-500" />
               </a>
-              <a href="/reports" className="sidebar-item">
+              <a href="/reports" className="sidebar-item flex items-center gap-2 px-3 py-2 hover:bg-gray-100 rounded-md">
                 <BarChart2 size={18} />
                 <span>Hesabat</span>
               </a>
@@ -56,10 +60,14 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
 
           <div className="mb-4">
             <div className="sidebar-heading">İDARƏ</div>
-            <nav className="mt-1">
-              <a href="/students" className="sidebar-item">
+            <nav className="mt-1 space-y-1 px-2">
+              <a
+                href="/students"
+                className="sidebar-item bg-gray-100 rounded-md flex items-center gap-2 px-3 py-2"
+              >
                 <Users size={18} />
                 <span>Tələbələr</span>
+                <Lock size={16} className="ml-auto text-gray-500" />
               </a>
             </nav>
           </div>
@@ -67,7 +75,7 @@ const Sidebar = ({ isOpen, closeSidebar }) => {
           <div className="mb-4">
             <div className="sidebar-heading">HESABDAN ÇIXIŞ</div>
             <nav className="mt-1">
-              <a href="/logout" className="sidebar-item">
+              <a href="/logout" className="sidebar-item flex items-center gap-2 px-3 py-2 hover:bg-gray-100 rounded-md">
                 <LogOut size={18} />
                 <span>Çıxış</span>
               </a>

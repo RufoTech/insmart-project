@@ -8,6 +8,7 @@ import {
   Route,
 } from 'react-router-dom';
 import Home from './pages/Home';
+import Dashboard from './components/Dashboard';
 
 function App() {
 
@@ -19,6 +20,7 @@ function App() {
 
         <Route path="/form" element={<StudentVerification />} />
         <Route path="/panel" element={<AdminPanel />} />
+        <Route path='/dashboard' element={<Dashboard/>}/>
       </Routes>
     </Router>
    
