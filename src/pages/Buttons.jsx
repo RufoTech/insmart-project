@@ -15,6 +15,11 @@ const Buttons = () => {
             Admin Panel
           </button>
         </Link>
+        <Link to="/dashboard">
+          <button className="px-6 py-3 bg-yellow-400 text-white font-bold rounded-2xl shadow-lg hover:bg-yellow-500 transition duration-300 ease-in-out">
+            Dashboard
+          </button>
+        </Link>
       </div>
     </div>
   );
