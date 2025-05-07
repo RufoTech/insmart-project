@@ -1,6 +1,15 @@
+// components/Stat-card.jsx
 import { Plus } from "lucide-react"
 
-export default function StatCard({ title, value, subtitle, icon, actionLabel = "Əlavə et", iconOnly = false }) {
+export default function StatCard({
+  title,
+  value,
+  subtitle,
+  icon,
+  actionLabel = "Əlavə et",
+  iconOnly = false,
+  onAction,            // yeni prop
+}) {
   return (
     <div className="bg-white p-6 rounded-lg shadow-sm">
       <div className="flex justify-between items-start">
@@ -14,11 +23,17 @@ export default function StatCard({ title, value, subtitle, icon, actionLabel = "
             </div>
           )}
         </div>
-        <div className={`${iconOnly ? "p-3 bg-gray-50 rounded-full" : ""}`}>{icon}</div>
+        <div className={`${iconOnly ? "p-3 bg-gray-50 rounded-full" : ""}`}>
+          {icon}
+        </div>
       </div>
 
       {!iconOnly && actionLabel && (
-        <button className="mt-4 bg-blue-600 text-white text-xs py-1 px-3 rounded flex items-center gap-1">
+        <button
+          type="button"
+          onClick={onAction}                      // burada bağladıq
+          className="mt-4 bg-blue-600 text-white text-xs py-1 px-3 rounded flex items-center gap-1"
+        >
           <Plus className="w-3 h-3" />
           {actionLabel}
         </button>

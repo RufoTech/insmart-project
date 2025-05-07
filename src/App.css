@@ -42,4 +42,8 @@
   .status-inactive {
     @apply text-red-600;
   }
-  
+  @media(min-width:991px){
+    .settings{
+      margin-top: 130px;
+    }
+  }

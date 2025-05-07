@@ -1,4 +1,4 @@
-import { Bell, LayoutDashboard, BarChart2, Users, Calendar, Settings, FileText } from "lucide-react"
+import { Bell, LayoutDashboard, BarChart2, Users, Calendar, Settings, PanelLeftOpen,Network, ShieldEllipsis  } from "lucide-react"
 
 export default function Sidebar() {
   return (
@@ -7,12 +7,13 @@ export default function Sidebar() {
         <button className="w-10 h-10 flex items-center justify-center text-blue-600 rounded-lg hover:bg-blue-50">
           <Bell className="w-6 h-6" />
         </button>
-        <button className="w-10 h-10 flex items-center justify-center text-blue-600 rounded-lg hover:bg-blue-50">
-          <FileText className="w-6 h-6" />
+        <button className="w-10 h-10 flex items-center justify-center  rounded-lg hover:bg-blue-50">
+          <PanelLeftOpen className="w-6 h-6" />
         </button>
+       
       </div>
 
-      <div className="flex-1 flex flex-col items-center gap-4 mt-10">
+      <div className="flex-1 flex flex-col items-center gap-4 mt-25">
         <button className="w-10 h-10 flex items-center justify-center text-blue-600 bg-blue-50 rounded-lg">
           <LayoutDashboard className="w-6 h-6" />
         </button>
@@ -23,10 +24,16 @@ export default function Sidebar() {
           <Users className="w-6 h-6" />
         </button>
         <button className="w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-lg">
-          <Calendar className="w-6 h-6" />
+          <Network className="w-6 h-6" />
         </button>
         <button className="w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-lg">
+          <Calendar className="w-6 h-6" />
+        </button>
+        <button className="w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-lg settings">
           <Settings className="w-6 h-6" />
+        </button>
+        <button className="w-10 h-10 flex items-center justify-center text-gray-500 hover:bg-gray-100 rounded-lg ">
+          <ShieldEllipsis className="w-6 h-6" />
         </button>
       </div>
     </div>
